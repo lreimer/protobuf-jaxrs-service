@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package search;
+
+option java_package = "cloud.nativ.javaee";
+option java_outer_classname = "SearchProtos";
+
+message SearchRequest {
+    string query = 1;
+    int32 page_number = 2;
+    int32 result_per_page = 3;
+}
+
+message SearchResponse {
+    repeated Result results = 1;
+}
+
+message Result {
+    string url = 1;
+    string title = 2;
+    repeated string snippets = 3;
+}
+
+service SearchService {
+    rpc Search (SearchRequest) returns (SearchResponse);
+}

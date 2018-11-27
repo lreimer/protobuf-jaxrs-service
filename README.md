@@ -12,6 +12,12 @@ $ ./gradlew assemble
 $ docker-compose up --build
 ```
 
+## References
+
+- https://developers.google.com/protocol-buffers/docs/overview
+- https://developers.google.com/protocol-buffers/docs/javatutorial
+- https://github.com/google/protobuf-gradle-plugin
+
 ## Maintainer
 
 M.-Leander Reimer (@lreimer), <mario-leander.reimer@qaware.de>
