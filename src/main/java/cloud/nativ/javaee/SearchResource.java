@@ -1,8 +1,8 @@
 package cloud.nativ.javaee;
 
-import cloud.nativ.javaee.SearchProtos.SearchRequest;
-import cloud.nativ.javaee.SearchProtos.SearchResponse;
 import cloud.nativ.javaee.protobuf.ProtocolBufferMediaType;
+import cloud.nativ.javaee.types.SearchProtos.SearchRequest;
+import cloud.nativ.javaee.types.SearchProtos.SearchResponse;
 import lombok.extern.java.Log;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -12,7 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import java.util.logging.Level;
 
-import static cloud.nativ.javaee.SearchProtos.*;
+import static cloud.nativ.javaee.types.SearchProtos.Result;
 
 @Log
 @ApplicationScoped

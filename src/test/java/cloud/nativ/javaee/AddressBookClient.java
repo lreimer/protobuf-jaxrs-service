@@ -1,10 +1,12 @@
 package cloud.nativ.javaee;
 
-import cloud.nativ.javaee.AddressBookProtos.Person.PhoneNumber;
-import cloud.nativ.javaee.AddressBookProtos.Person.PhoneType;
 import cloud.nativ.javaee.protobuf.ProtocolBufferMediaType;
 import cloud.nativ.javaee.protobuf.ProtocolBufferMessageBodyReader;
 import cloud.nativ.javaee.protobuf.ProtocolBufferMessageBodyWriter;
+import cloud.nativ.javaee.types.AddressBook;
+import cloud.nativ.javaee.types.Person;
+import cloud.nativ.javaee.types.Person.PhoneNumber;
+import cloud.nativ.javaee.types.Person.PhoneType;
 import lombok.extern.java.Log;
 
 import javax.ws.rs.client.Client;
@@ -15,8 +17,6 @@ import javax.ws.rs.core.Response;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
-import static cloud.nativ.javaee.AddressBookProtos.AddressBook;
-import static cloud.nativ.javaee.AddressBookProtos.Person;
 
 /**
  * Simple JAX-RS test client for the AddressBook resource.

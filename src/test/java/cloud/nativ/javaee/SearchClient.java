@@ -1,10 +1,10 @@
 package cloud.nativ.javaee;
 
-import cloud.nativ.javaee.SearchProtos.SearchRequest;
-import cloud.nativ.javaee.SearchProtos.SearchResponse;
 import cloud.nativ.javaee.protobuf.ProtocolBufferMediaType;
 import cloud.nativ.javaee.protobuf.ProtocolBufferMessageBodyReader;
 import cloud.nativ.javaee.protobuf.ProtocolBufferMessageBodyWriter;
+import cloud.nativ.javaee.types.SearchProtos.SearchRequest;
+import cloud.nativ.javaee.types.SearchProtos.SearchResponse;
 import lombok.extern.java.Log;
 
 import javax.ws.rs.client.Client;

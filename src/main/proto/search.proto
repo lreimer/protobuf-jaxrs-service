@@ -2,8 +2,9 @@ syntax = "proto3";
 
 package search;
 
-option java_package = "cloud.nativ.javaee";
+option java_package = "cloud.nativ.javaee.types";
 option java_outer_classname = "SearchProtos";
+option optimize_for = SPEED;
 
 message SearchRequest {
     string query = 1;

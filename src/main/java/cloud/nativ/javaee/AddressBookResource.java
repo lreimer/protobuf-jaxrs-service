@@ -1,8 +1,8 @@
 package cloud.nativ.javaee;
 
-import cloud.nativ.javaee.AddressBookProtos.AddressBook;
-import cloud.nativ.javaee.AddressBookProtos.Person;
 import cloud.nativ.javaee.protobuf.ProtocolBufferMediaType;
+import cloud.nativ.javaee.types.AddressBook;
+import cloud.nativ.javaee.types.Person;
 import lombok.extern.java.Log;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -20,6 +20,7 @@ import java.util.logging.Level;
 public class AddressBookResource {
 
     @POST
+
     public AddressBook getAddressBook(Person person) {
         LOGGER.log(Level.INFO, "Get AddressBook for Person {0}", person);
         return AddressBook.newBuilder().addPeople(person).build();
