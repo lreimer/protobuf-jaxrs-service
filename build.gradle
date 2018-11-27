@@ -13,6 +13,8 @@ lombok {
 
 dependencies {
     providedCompile 'javax:javaee-api:8.0'
+    providedCompile 'org.eclipse.microprofile.metrics:microprofile-metrics-api:1.1.1'
+    
     compile 'com.google.protobuf:protobuf-java:3.6.1'
 
     testCompile 'org.glassfish.jersey.core:jersey-client:2.26'

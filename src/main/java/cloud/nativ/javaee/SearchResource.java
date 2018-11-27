@@ -4,6 +4,7 @@ import cloud.nativ.javaee.protobuf.ProtocolBufferMediaType;
 import cloud.nativ.javaee.types.SearchProtos.SearchRequest;
 import cloud.nativ.javaee.types.SearchProtos.SearchResponse;
 import lombok.extern.java.Log;
+import org.eclipse.microprofile.metrics.annotation.Timed;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.Consumes;
@@ -13,6 +14,7 @@ import javax.ws.rs.Produces;
 import java.util.logging.Level;
 
 import static cloud.nativ.javaee.types.SearchProtos.Result;
+import static org.eclipse.microprofile.metrics.MetricUnits.SECONDS;
 
 @Log
 @ApplicationScoped
@@ -22,6 +24,7 @@ import static cloud.nativ.javaee.types.SearchProtos.Result;
 public class SearchResource {
 
     @POST
+    @Timed(name = "search", absolute = true, unit = SECONDS)
     public SearchResponse search(SearchRequest request) {
         LOGGER.log(Level.INFO, "Received SearchRequest {0}.", request);
 
