@@ -12,6 +12,12 @@ $ ./gradlew assemble
 $ docker-compose up --build
 ```
 
+When everything is running, run the following Gradle tasks to execute the Protobuf client.
+```
+$ ./gradlew searchClient
+$ ./gradlew addressBookClient
+``` 
+
 ## References
 
 - https://developers.google.com/protocol-buffers/docs/overview

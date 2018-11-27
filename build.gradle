@@ -26,3 +26,13 @@ protobuf {
         artifact = 'com.google.protobuf:protoc:3.6.1'
     }
 }
+
+task(searchClient, dependsOn: 'testClasses', type: JavaExec) {
+    main = 'cloud.nativ.javaee.SearchClient'
+    classpath = sourceSets.test.runtimeClasspath
+}
+
+task(addressBookClient, dependsOn: 'testClasses', type: JavaExec) {
+    main = 'cloud.nativ.javaee.AddressBookClient'
+    classpath = sourceSets.test.runtimeClasspath
+}
