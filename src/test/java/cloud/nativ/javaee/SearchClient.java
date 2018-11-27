@@ -16,10 +16,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 /**
- * Simple JAX-RS test client implementation.
+ * Simple JAX-RS test client for the Search resource.
  */
 @Log
-public class SearchResourceClient {
+public class SearchClient {
     public static void main(String[] args) {
         Client client = ClientBuilder.newBuilder()
                 .connectTimeout(5, TimeUnit.SECONDS).readTimeout(5, TimeUnit.SECONDS)
